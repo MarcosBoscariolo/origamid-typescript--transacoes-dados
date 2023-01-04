@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "strict": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": true,
     "removeComments": true,
     "noImplicitReturns": true,
