@@ -1,8 +1,9 @@
 import { TransacaoAPI } from "../../interfaces/transacao-api.interface";
+import { Transacao } from "../../interfaces/transacao.interface";
 import formatarData from "./formatar-data.js";
 import formatarMoeda from "./formatar-moeda.js";
 
-export default function normalizarTransacao(transacao: TransacaoAPI) {
+export default function normalizarTransacao(transacao: TransacaoAPI): Transacao {
     return {
         nome: transacao.Nome,
         id: transacao.ID,
