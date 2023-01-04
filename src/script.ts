@@ -1,14 +1,14 @@
-import fetchData from "./fetch-data.js";
-import { Transacao } from "./transacao.interface.js";
+import fetchData from "./shared/service/fetch-data.js";
+import { TransacaoAPI } from "./interfaces/transacao-api.interface.js";
+import normalizarTransacao from "./shared/utils/normalizar-transacao.js";
 
 handleData();
 
 async function handleData() {
-    const data = await fetchData<Transacao[]>("https://api.origamid.dev/json/transacoes.json");
-    if (data) {
-        data.forEach((transacao) => {
-            console.log(transacao);
-        });
-    }
+  const data = await fetchData<TransacaoAPI[]>(
+    "https://api.origamid.dev/json/transacoes.json?"
+  );
+  if (!data) return;
+  const transacoes = data.map(normalizarTransacao);
+  console.log(transacoes)
 }
-
