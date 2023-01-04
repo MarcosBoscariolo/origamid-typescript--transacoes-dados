@@ -1,5 +1,5 @@
-import { TransacaoAPI } from "../../interfaces/transacao-api.interface";
-import { Transacao } from "../../interfaces/transacao.interface";
+import { TransacaoAPI } from "../../models/interfaces/transacao-api.interface";
+import { Transacao } from "../../models/interfaces/transacao.interface";
 import formatarData from "./formatar-data.js";
 import formatarMoeda from "./formatar-moeda.js";
 

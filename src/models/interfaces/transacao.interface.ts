@@ -1,5 +1,4 @@
-import { TransacaoPagamento } from "./transacao-pagamento.interface";
-import { TransacaoStatus } from "./transacao-status.interface";
+import { TransacaoPagamento, TransacaoStatus } from "../types/transacao-types";
 
 export interface Transacao {
   nome: string;

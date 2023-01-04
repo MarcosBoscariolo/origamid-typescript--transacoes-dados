@@ -1,6 +1,6 @@
-import { Transacao } from "../../interfaces/transacao.interface";
+import { Transacao } from "../../models/interfaces/transacao.interface";
 
-export default function preencherTabela(transacoes: Transacao[]) {
+export default function preencherTabela(transacoes: Transacao[]): void {
     const tabela = document.querySelector("#transacoes tbody");
     if (!tabela) return;
     transacoes.forEach((transacao) => {
@@ -13,5 +13,5 @@ export default function preencherTabela(transacoes: Transacao[]) {
                 <td>${transacao.status}</td>
             </tr>
         `
-    })
+    });
 }
